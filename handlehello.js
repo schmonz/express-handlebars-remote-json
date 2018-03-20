@@ -21,6 +21,10 @@ app.get('/june', function(req, res)
 {
 res.render('june');
 });
+app.get('/lee', function(req, res)
+{
+res.render('town', { town: "Lee Vining"});
+});
 app.listen(app.get('port'),  function () {
 console.log('Hello express started on http://localhost:' +
 app.get('port') + '; press Ctrl-C to terminate.' );

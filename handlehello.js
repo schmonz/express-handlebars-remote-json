@@ -25,6 +25,21 @@ app.get('/lee', function(req, res)
 {
 res.render('town', { town: "Lee Vining"});
 });
+var californiapeople = {
+   people: [
+{"name":"Adams","first":"Ansel","profession":"photographer",
+   "born"       :"SanFrancisco"},
+{"name":"Muir","first":"John","profession":"naturalist",
+   "born":"Scotland"},
+{"name":"Schwarzenegger","first":"Arnold",
+   "profession":"governator","born":"Germany"},
+{"name":"Wellens","first":"Paul","profession":"author",
+   "born":"Belgium"}
+]   };
+app.get('/californiapeople', function(req, res)
+{
+res.render('californiapeople', californiapeople);
+});
 app.listen(app.get('port'),  function () {
 console.log('Hello express started on http://localhost:' +
 app.get('port') + '; press Ctrl-C to terminate.' );
